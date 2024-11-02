@@ -1,0 +1,31 @@
+body {background-color: #E9D8A6;}
+body {color: #005F73;}
+a {color: #EE9B00 ;}
+h1, h2, h3, h4, h5, h6 {color: #0A9396;}
+nav {background-color: #EE9B00;}
+nav a:hover {background-color: #94D2BD;}
+nav a {color: #9B2226;}
+nav {padding: 10px;}
+nav {margin-bottom: 30px;}
+.copyright {float: left;}
+.quote {float: right;
+text-align: right;}
+h1 {text-align: center;}
+
+.skills-container {display: flex;
+justify-content: space-between;
+flex-basis: 75%;}
+
+.skill {flex: 1; text-align: center;}
+
+.icon {width: 50px; height: auto;}
+aside {background-color: #EE9B00;border-radius: 11px; flex-basis: 25%; padding: 15px;}
+.flexbox-2 {display: flex; flex-direction: row; gap: 20px;}
+
+body {
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+p {margin-bottom: 20px;}
