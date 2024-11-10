@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Text and Background</title>
+  <style>
+    
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      font-size: 2rem;
+      color: white;
+      background-color: blue; 
+    }
+
+    
+    #text::before {
+      content: "I'm small";
+    }
+
+    
+    @media (min-width: 800px) {
+      body {
+        background-color: red;
+      }
+
+      #text::before {
+        content: "I'm large";
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="text"></div>
+</body>
+</html>
