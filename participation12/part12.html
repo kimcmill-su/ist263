@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Participation 12</title>
+    <style>
+        .text-div {
+            font-size: 30px;
+            font-weight: bold;
+            color: black;
+            cursor: pointer;
+            text-align: center;
+            margin-top: 30px;
+        }
+    </style>
+    <script>
+        function changeText() {
+            const div = document.getElementById('textDiv');
+            div.innerText = 'Orange Nation';
+            div.style.color = 'orange';
+        }
+    </script>
+</head>
+<body>
+    <div id="textDiv" class="text-div" onclick="changeText()">
+        Syracuse University
+    </div>
+</body>
+</html>
