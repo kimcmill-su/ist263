@@ -110,7 +110,7 @@ textarea {
 }
 
 input[type="submit"] {
-    background-color: #007BFF;
+    background-color: #cb997e;
     color: white;
     border: none;
     padding: 10px 15px;
@@ -121,7 +121,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: #0056b3;
+    background-color: #A5A58D;
 }
 
 /* Footer Styling */
