@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <a href="#main-content" class="skip-to-content">Skip to Content</a>
+
+    <nav>
+        <a href="https://kimcmill-su.github.io/ist263/lab13/">Home</a>
+        <span>|</span>
+        <a href="https://kimcmill-su.github.io/ist263/lab13/skills.html">Skills</a>
+        <span>|</span>
+        <a href="https://kimcmill-su.github.io/ist263/lab13/contact.html">Contact</a>
+    </nav>
+
+    <h1>Contact</h1>
+    <main id="main-content"> 
+        <div class="row row1">
+            <div class="column address-column">
+                <address> 
+                    Kiamesha McMillian<br>
+                    900 S Crouse Ave<br>
+                    Syracuse, NY 13244
+                </address>
+            </div>
+
+            <div class="links-column">
+                <p><a href="https://www.linkedin.com/in/kiamesha-mcmillian/" target="_blank">My LinkedIn Profile</a></p>
+                <a href="https://www.linkedin.com/in/kiamesha-mcmillian/" target="_blank">
+                    
+                    <img src="../images/logo-sized.png" alt="LinkedIn logo for Kiamesha McMillian's profile">
+                </a>
+                <p><a href="mailto:kimcmill@syr.edu">Contact Kiamesha McMillian via Email</a></p>
+            </div>
+        </div>
+
+        <div class="row row2">
+            <div class="form-map-box">
+                <div class="form-column">
+                    
+                    <form action="https://formspree.io/f/mjkbqvaw" method="POST">
+                        <label for="fname">First name:</label><br>
+                        <input type="text" id="fname" name="fname" required><br>
+                        <label for="lname">Last name:</label><br>
+                        <input type="text" id="lname" name="lname" required>
+                    </form>
+
+                    <p>Choose how you would like to be contacted:</p>
+                    <form action="https://formspree.io/f/mjkbqvaw" method="POST">
+                        <input type="radio" id="phone" name="contact_method" value="phone" required>
+                        <label for="phone">Phone</label><br>
+                        <input type="radio" id="email" name="contact_method" value="email">
+                        <label for="email">Email</label>
+                    </form>
+
+                    <form action="https://formspree.io/f/mjkbqvaw" method="POST">
+                        <label for="comments">Comments:</label>
+                        <textarea id="comments" name="comments" rows="5" cols="40"></textarea>
+                        <br>
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+
+                <div class="column map-column">
+                    
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2756.5839522520982!2d-76.13952722405143!3d43.04025847113775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d9f39f4537cd79%3A0x968a90aa98400698!2s900%20S%20Crouse%20Ave%2C%20Syracuse%2C%20NY%2013210!5e1!3m2!1sen!2sus!4v1726152357051!5m2!1sen!2sus" 
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
