@@ -1,9 +1,8 @@
-
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #ffe8d6; /* Page background color */
+    background-color: #fff; /* Page background color */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -11,9 +10,9 @@ body {
 
 /* Navigation Styling */
 nav {
-    background-color: #6b705c;
+    background-color: #004e98;
     padding: 10px 20px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #ebebeb;
 }
 
 .nav-container {
@@ -25,7 +24,7 @@ nav {
 
 .nav-container a {
     text-decoration: none;
-    color: #333;
+    color: #fff;
     font-size: 18px;
     padding: 10px 15px;
     transition: background-color 0.3s, color 0.3s;
@@ -33,7 +32,7 @@ nav {
 }
 
 .nav-container a:hover {
-    background-color: #ddd;
+    background-color: #ebebeb;
     color: #000;
 }
 
@@ -46,37 +45,70 @@ nav {
     }
 }
 
-/* Main Content Styling */
-.content {
-    flex: 1;
+/* Flex Container Styling */
+.flex-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap; /* Allows wrapping to the next row */
+    gap: 30px; /* Increased gap between flexboxes */
+    justify-content: center; /* Center items horizontally */
+    margin: 20px auto; /* Center container on the page */
+}
+
+/* Flexbox Item Styling */
+.flex-item {
+    flex: 1 1 calc(50% - 40px); /* 50% width minus the gap */
+    max-width: 400px; /* Limit the maximum width of each item */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+    background-color: #ff6700; /* Background for each box */
+    border-radius: 8px; /* Rounded corners for the box */
+    overflow: hidden; /* Clip any overflow (important for hover effect) */
+    position: relative; /* Set position for the overlay */
+    transition: box-shadow 0.3s; /* Smooth shadow transition */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add slight shadow */
+    padding: 20px; /* Space inside the flexbox */
+    margin: 10px; /* Space between the flexboxes */
+}
+
+.flex-item:hover {
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.4); /* Shadow covers the entire flexbox on hover */
+}
+
+/* Image Styling */
+.flex-item img {
+    width: 100%; /* Full width */
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover; /* Crop images to fit */
+    border-radius: 8px; /* Match box corners */
+    margin-bottom: 15px; /* Space between the image and content inside the flexbox */
+}
+
+/* Overlay Styling */
+.flex-item .overlay {
+    position: absolute;
+    top: 0; /* Start at the top */
+    left: 0; /* Start at the left */
+    width: 100%; /* Full width of the flexbox */
+    height: 100%; /* Full height of the flexbox */
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+    color: white;
+    display: flex; /* Center the text */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    font-size: 1.2em;
+    opacity: 0; /* Hidden initially */
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 8px; /* Match the flexbox's rounded corners */
+}
+
+.flex-item:hover .overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+
+/* Flexbox Paragraph Text Styling */
+.flex-item p {
     text-align: center;
-    padding: 20px;
-}
-
-h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-}
-
-h2 {
-    font-size: 1.8em;
-    margin: 15px 0;
-}
-
-p {
-    font-size: 1em;
-    max-width: 800px;
-    margin-bottom: 20px;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    margin: 15px 0;
-    border-radius: 8px;
+    color: white;
+    margin-top: 10px; /* Add spacing between the image and paragraph text */
 }
 
 /* Form Styling */
@@ -98,10 +130,10 @@ textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #ddd;
+    border: 1px solid #ebebeb;
     border-radius: 4px;
     font-size: 1em;
-    background-color: #ffe8d6; /* Match background color */
+    background-color: #fff; /* Match background color */
     color: #333;
 }
 
@@ -110,7 +142,7 @@ textarea {
 }
 
 input[type="submit"] {
-    background-color: #cb997e;
+    background-color: #ff6700;
     color: white;
     border: none;
     padding: 10px 15px;
@@ -121,12 +153,12 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: #A5A58D;
+    background-color: #004e98;
 }
 
 /* Footer Styling */
 footer {
-    background-color: #A5A58D;
+    background-color: #004e98;
     color: white;
     text-align: center;
     padding: 10px 0;
@@ -135,6 +167,10 @@ footer {
 
 /* Responsive Design for Small Screens */
 @media (max-width: 768px) {
+    .flex-item {
+        flex: 1 1 100%; /* Single column on small screens */
+    }
+
     .content {
         padding: 10px;
     }
@@ -152,3 +188,4 @@ footer {
         font-size: 0.9em;
     }
 }
+
