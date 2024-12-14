@@ -64,13 +64,13 @@ nav {
     overflow: hidden; /* Clip any overflow (important for hover effect) */
     position: relative; /* Set position for the overlay */
     transition: box-shadow 0.3s; /* Smooth shadow transition */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add slight shadow */
+    box-shadow: 0 4px 6px #fff(0, 0, 0, 0.1); /* Add slight shadow */
     padding: 20px; /* Space inside the flexbox */
     margin: 10px; /* Space between the flexboxes */
 }
 
 .flex-item:hover {
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.4); /* Shadow covers the entire flexbox on hover */
+    box-shadow: 0 0 25px #000(0, 0, 0, 0.4); /* Shadow covers the entire flexbox on hover */
 }
 
 /* Image Styling */
@@ -89,7 +89,7 @@ nav {
     left: 0; /* Start at the left */
     width: 100%; /* Full width of the flexbox */
     height: 100%; /* Full height of the flexbox */
-    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+    background: #000(0, 0, 0, 0.6); /* Semi-transparent black */
     color: white;
     display: flex; /* Center the text */
     align-items: center; /* Center vertically */
