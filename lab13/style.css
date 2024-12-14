@@ -1,3 +1,13 @@
+
+
+.open-sans-text {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
 body {background-color: #FFFFFF;}
 body {color: #353535;}
 a {color: #353535;}
