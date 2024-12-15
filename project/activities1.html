@@ -1,55 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Syracuse Travel Activities</title>
-    <link rel="stylesheet" href="../project/style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // Filter function
+        function searchFlexboxes() {
+            const searchInput = document.getElementById("search-input").value.toLowerCase();
+            const flexItems = document.getElementsByClassName("flex-item");
+
+            for (let item of flexItems) {
+                const title = item.querySelector(".overlay").textContent.toLowerCase();
+                if (title.includes(searchInput)) {
+                    item.style.display = "block"; // Show matching item
+                } else {
+                    item.style.display = "none"; // Hide non-matching items
+                }
+            }
+        }
+    </script>
 </head>
+
 <body>
+    <div class="header">
+        <h1>Fun Things to Do in the Cuse!</h1>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search...">
+            <button onclick="searchFlexboxes()">
+                <img src="../project/download.png" alt="Search" class="search-icon">
+            </button>
+        </div>
+    </div>
+
     <nav>
         <div class="nav-container">
             <a href="https://kimcmill-su.github.io/ist263/project/Home1.html">Home</a>
-            <a href="https://kimcmill-su.github.io/ist263/project/Eats1.html">Food & Drinks</a>
+            <a href="https://kimcmill-su.github.io/ist263/project/eats.html">Food & Drinks</a>
             <a href="https://kimcmill-su.github.io/ist263/project/activities1.html">Activities</a>
         </div>
     </nav>
-    <hr>
-    <h1>Fun Things to do in the Cuse!</h1>
 
     <div class="flex-container">
         <div class="flex-item">
             <img src="../project/destiny-usa-canyon-snowflakes-cr-j-smith-waer.jpg" alt="inside of destiny usa">
             <div class="overlay">Destiny USA</div>
-            <p>More than just a mall, Destiny USA is a shopping and entertainment destination. You can spend hours browsing popular stores like Apple, Nordstrom Rack, and H&M, but what makes it stand out are the activities. Challenge your friends to a game at 5 Wits, an immersive escape room experience, or try indoor go-kart racing at RPM Raceway. Afterward, catch a movie at the Regal Cinema IMAX Theater, or grab a bite to eat at the Canyon Climb Adventure, a ropes course towering 70 feet in the air!</p>
+            <p>More than just a mall, Destiny USA is a shopping and entertainment destination. Challenge your friends to a game at 5 Wits, try indoor go-kart racing at RPM Raceway, or enjoy a movie at the Regal Cinema IMAX Theater!</p>
         </div>
         <div class="flex-item">
             <img src="../project-images/ErieCanalMuseumSyracuse.jpg" alt="outside of the erie canal museum">
             <div class="overlay">Erie Canal Museum</div>
-            <p>Learn about the history that shaped Syracuse at the Erie Canal Museum, located in a 19th-century Weighlock Building. Explore interactive exhibits that tell the story of the Erie Canal and how it transformed the economy of not just Syracuse, but the entire state. Don’t miss the full-sized canal boat and the fascinating model of the canal as it was in its prime.</p>
+            <p>Learn about the history of Syracuse at the Erie Canal Museum, housed in a 19th-century Weighlock Building. Don’t miss the full-sized canal boat and model of the canal in its prime.</p>
         </div>
         <div class="flex-item">
             <img src="../project-images/Onondaga_Lake_Park.jpg" alt="onondaga lake park view of the lake and trees">
             <div class="overlay">Onondaga Lake Park</div>
-            <p>Dubbed the “Central Park of Central New York,” Onondaga Lake Park is a 7.5-mile stretch of outdoor beauty along the lakeshore. Rent a bike or go for a leisurely walk while taking in the scenic views of the lake. You’ll also find playgrounds, dog parks, and the Salt Museum, which provides insight into the region’s “salt boom” history. On warm days, rent a kayak or canoe and get out on the water!</p>
+            <p>Onondaga Lake Park is a 7.5-mile stretch of outdoor beauty. Rent a bike, enjoy a scenic walk, or get out on the water with a kayak or canoe.</p>
         </div>
         <div class="flex-item">
             <img src="../project-images/Hall_of_Languages_at_Syracuse_University,_as_seen_from_Newhouse_Steps.jpg" alt="syracuse university hall of languages">
             <div class="overlay">Syracuse University</div>
-            <p> For a mix of history, architecture, and university spirit, a visit to Syracuse University is a must. Take a self-guided tour around the Hall of Languages, one of the oldest buildings on campus, which offers sweeping views of the city. Sports fans can check out JMA Dome, the largest domed stadium on any U.S. college campus, where you can catch a football or basketball game depending on the season.</p>
+            <p>Visit Syracuse University for its architecture, history, and spirit. Don’t miss the Hall of Languages or a game at the JMA Dome!</p>
         </div>
         <div class="flex-item">
             <img src="../project-images/Everson_Museum_rear.jpg" alt="outside entrance of the everson art museum">
             <div class="overlay">Everson Museum</div>
-            <p>Art enthusiasts will love exploring the Everson Museum, designed by world-renowned architect I.M. Pei. This museum features an impressive collection of American ceramics and paintings. With rotating exhibitions, you’ll find modern and contemporary works that span photography, sculpture, and video. The museum also offers interactive workshops and film screenings, making it a dynamic stop for anyone interested in the arts.</p>
+            <p>Art enthusiasts will enjoy the Everson Museum, featuring American ceramics, paintings, and rotating exhibitions. Perfect for modern and contemporary art lovers.</p>
         </div>
     </div>
 
     <footer>
         <hr>
-        <div class="copyright">Copyright &copy;2024</div>
+        <div class="footer-container">
+            <div class="footer-quote">
+                <p>“Live with no excuses and travel with no regrets” ~ Oscar Wilde</p>
+            </div>
+            <div class="footer-social">
+                <p><strong>More Travel Information:</strong></p>
+                <a href="https://www.tripadvisor.com/Tourism-g48713-Syracuse_Finger_Lakes_New_York-Vacations.html" target="_blank">Tripadvisor</a> |
+                <a href="https://www.hotels.com/de1643113/hotels-syracuse-new-york/" target="_blank">Hotels</a> |
+                <a href="https://www.britannica.com/place/Syracuse-New-York" target="_blank">History</a>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2024 Syracuse Travel Activities. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
 </body>
+
 </html>
 
 

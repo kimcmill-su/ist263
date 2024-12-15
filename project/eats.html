@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syracuse Travel Eats</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // Filter function
+        function searchFlexboxes() {
+            const searchInput = document.getElementById("search-input").value.toLowerCase();
+            const flexItems = document.getElementsByClassName("flex-item");
+
+            for (let item of flexItems) {
+                const title = item.querySelector("p strong").textContent.toLowerCase();
+                if (title.includes(searchInput)) {
+                    item.style.display = "block"; // Show matching item
+                } else {
+                    item.style.display = "none"; // Hide non-matching items
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Explore Syracuse Eats</h1>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search...">
+            <button onclick="searchFlexboxes()">
+                <img src="../project/download.png" alt="Search" class="search-icon">
+            </button>
+        </div>
+    </div>
+
+    <nav>
+        <div class="nav-container">
+            <a href="#">Home</a>
+            <a href="#">Food & Drinks</a>
+            <a href="#">Activities</a>
+        </div>
+    </nav>
+
+    <div class="flex-container">
+        <!-- Flexbox 1 -->
+        <div class="flex-item">
+            <img src="../project-images/500px-Dinosaur_bar-b-que_syracuse.jpg" alt="Dinosaur BBQ">
+            <p><strong>Dinosaur Bar-B-Que</strong></p>
+            <div class="dropdown-content">
+                <p>Dinosaur Bar-B-Que serves some of the best slow-cooked BBQ in the country. Known for its bold, smoky flavors, the pulled pork, brisket, and St. Louis-style ribs are must-tries. Pair them with classic sides like mac and cheese or BBQ beans for an authentic experience!</p>
+                <a href="https://dinosaurbarbque.com/locations/syracuse" target="_blank">Visit Website</a>
+            </div>
+        </div>
+
+        <!-- Flexbox 2 -->
+        <div class="flex-item">
+            <img src="../project/image-asset.jpg" alt="Pastabilities">
+            <p><strong>Pastabilities</strong></p>
+            <div class="dropdown-content">
+                <p>Pastabilities is famous for its house-made pastas and signature Hot Tomato Oil. Enjoy artisanal dishes like Chicken Riggies or Duck Bacon Flatbread in a cozy and rustic setting. Perfect for both casual meals and special occasions!</p>
+                <a href="https://www.pastabilities.com/" target="_blank">Visit Website</a>
+            </div>
+        </div>
+
+        <!-- Flexbox 3 -->
+        <div class="flex-item">
+            <img src="../project/download.jpg" alt="Apizza Regionale">
+            <p><strong>Apizza Regionale</strong></p>
+            <div class="dropdown-content">
+                <p>Apizza Regionale is a haven for wood-fired pizza lovers. Savor the Margherita for a taste of Naples or try the Pepperoni and Hot Honey pizza. With locally sourced ingredients, every bite is a farm-to-table delight!</p>
+                <a href="https://www.apizzaregionale.com/" target="_blank">Visit Website</a>
+            </div>
+        </div>
+
+        <!-- Flexbox 4 -->
+        <div class="flex-item">
+            <img src="../project/HU5Y6PJIO5FZFJGUC6H745M4NQ.avif" alt="Funk 'n Waffles">
+            <p><strong>Funk 'n Waffles</strong></p>
+            <div class="dropdown-content">
+                <p>Funk 'n Waffles offers an eclectic mix of savory and sweet waffles. From the Jive Turkey to the Banana Bread Waffle, there's something for everyone. Add live music to the mix for an unforgettable dining experience!</p>
+                <a href="https://funknwaffles.com/" target="_blank">Visit Website</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <hr>
+        <div class="footer-container">
+            <div class="footer-quote">
+                <p>“Live with no excuses and travel with no regrets” ~ Oscar Wilde</p>
+            </div>
+            <div class="footer-social">
+                <p><strong>More Travel Information:</strong></p>
+                <a href="https://www.tripadvisor.com/Tourism-g48713-Syracuse_Finger_Lakes_New_York-Vacations.html" target="_blank">Tripadvisor</a> |
+                <a href="https://www.hotels.com/de1643113/hotels-syracuse-new-york/" target="_blank">Hotels</a> |
+                <a href="https://www.britannica.com/place/Syracuse-New-York" target="_blank">History</a>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2024 Syracuse Travel. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
+
+
+
+

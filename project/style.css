@@ -1,11 +1,58 @@
+/* General Body Styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Noto Serif', serif;
     line-height: 1.6;
     color: #333;
-    background-color: #fff; /* Page background color */
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header and Search Styling */
+.header {
     display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px 10px;
+}
+
+h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    color: #004e98;
+    margin: 0;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-container input {
+    font-family: 'Noto Serif', serif;
+    font-size: 16px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.search-container button {
+    background-color: #004e98;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-container button img.search-icon {
+    width: 20px;
+    height: 20px;
+    filter: invert(1); /* Ensures the icon is white */
+}
+
+.search-container button:hover {
+    background-color: #003366;
 }
 
 /* Navigation Styling */
@@ -19,173 +66,105 @@ nav {
     display: flex;
     justify-content: center;
     gap: 30px;
-    flex-wrap: wrap; /* Ensures flexibility for smaller screens */
 }
 
 .nav-container a {
     text-decoration: none;
-    color: #fff;
+    color: white;
     font-size: 18px;
     padding: 10px 15px;
-    transition: background-color 0.3s, color 0.3s;
     border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .nav-container a:hover {
     background-color: #ebebeb;
-    color: #000;
+    color: #004e98;
 }
 
-/* Stacked Navigation for Mobile */
-@media (max-width: 768px) {
-    .nav-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-    }
-}
-
-/* Flex Container Styling */
+/* Flex Container */
 .flex-container {
     display: flex;
-    flex-wrap: wrap; /* Allows wrapping to the next row */
-    gap: 30px; /* Increased gap between flexboxes */
-    justify-content: center; /* Center items horizontally */
-    margin: 20px auto; /* Center container on the page */
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
 }
 
-/* Flexbox Item Styling */
+/* Flex Items */
 .flex-item {
-    flex: 1 1 calc(50% - 40px); /* 50% width minus the gap */
-    max-width: 400px; /* Limit the maximum width of each item */
-    box-sizing: border-box; /* Include padding and border in width calculation */
-    background-color: #ff6700; /* Background for each box */
-    border-radius: 8px; /* Rounded corners for the box */
-    overflow: hidden; /* Clip any overflow (important for hover effect) */
-    position: relative; /* Set position for the overlay */
-    transition: box-shadow 0.3s; /* Smooth shadow transition */
-    box-shadow: 0 4px 6px #fff(0, 0, 0, 0.1); /* Add slight shadow */
-    padding: 20px; /* Space inside the flexbox */
-    margin: 10px; /* Space between the flexboxes */
+    background-color: #ff6700;
+    border-radius: 8px;
+    text-align: center;
+    padding: 15px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.flex-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
 .flex-item:hover {
-    box-shadow: 0 0 25px #000(0, 0, 0, 0.4); /* Shadow covers the entire flexbox on hover */
+    transform: translateY(-5px);
 }
 
-/* Image Styling */
-.flex-item img {
-    width: 100%; /* Full width */
-    height: 200px; /* Fixed height for consistency */
-    object-fit: cover; /* Crop images to fit */
-    border-radius: 8px; /* Match box corners */
-    margin-bottom: 15px; /* Space between the image and content inside the flexbox */
-}
-
-/* Overlay Styling */
-.flex-item .overlay {
-    position: absolute;
-    top: 0; /* Start at the top */
-    left: 0; /* Start at the left */
-    width: 100%; /* Full width of the flexbox */
-    height: 100%; /* Full height of the flexbox */
-    background: #000(0, 0, 0, 0.6); /* Semi-transparent black */
-    color: white;
-    display: flex; /* Center the text */
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
-    font-size: 1.2em;
-    opacity: 0; /* Hidden initially */
-    transition: opacity 0.3s ease-in-out;
-    border-radius: 8px; /* Match the flexbox's rounded corners */
-}
-
-.flex-item:hover .overlay {
-    opacity: 1; /* Show overlay on hover */
-}
-
-/* Flexbox Paragraph Text Styling */
-.flex-item p {
-    text-align: center;
-    color: white;
-    margin-top: 10px; /* Add spacing between the image and paragraph text */
-}
-
-/* Form Styling */
-form {
-    margin: 20px 0;
-    width: 100%;
-    max-width: 600px;
-    text-align: left;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-input[type="text"],
-textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ebebeb;
-    border-radius: 4px;
-    font-size: 1em;
-    background-color: #fff; /* Match background color */
-    color: #333;
-}
-
-textarea {
-    resize: none;
-}
-
-input[type="submit"] {
-    background-color: #ff6700;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    font-size: 1em;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-input[type="submit"]:hover {
-    background-color: #004e98;
+.overlay {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
 }
 
 /* Footer Styling */
 footer {
     background-color: #004e98;
     color: white;
+    padding: 20px 0;
+}
+
+footer hr {
+    border: 0;
+    border-top: 1px solid white;
+    margin: 10px 0;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+.footer-quote {
+    flex: 1;
+    font-style: italic;
+}
+
+.footer-social {
+    flex: 1;
     text-align: center;
-    padding: 10px 0;
-    margin-top: auto;
 }
 
-/* Responsive Design for Small Screens */
-@media (max-width: 768px) {
-    .flex-item {
-        flex: 1 1 100%; /* Single column on small screens */
-    }
-
-    .content {
-        padding: 10px;
-    }
-
-    form {
-        padding: 0;
-    }
-
-    input[type="text"],
-    textarea {
-        font-size: 0.9em;
-    }
-
-    input[type="submit"] {
-        font-size: 0.9em;
-    }
+.footer-social a {
+    color: white;
+    text-decoration: none;
+    margin: 0 5px;
 }
+
+.footer-social a:hover {
+    text-decoration: underline;
+}
+
+.footer-copyright {
+    flex: 1;
+    text-align: right;
+}
+
 
