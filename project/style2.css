@@ -93,14 +93,14 @@ nav {
 
 /* Flex Items */
 .flex-item {
-    background-color: #ff6700;
+    background-color: #C0C0C0; /* Silver background color */
     border-radius: 8px;
     text-align: center;
     padding: 15px;
     width: 250px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s;
-    color: white; /* Ensure all text inside the flexbox is white */
+    color: black; /* Black text inside flexboxes */
 }
 
 .flex-item img {
@@ -115,14 +115,14 @@ nav {
 }
 
 .flex-item p {
-    color: white; /* Ensure paragraph text is white */
+    color: black; /* Ensure paragraph text is black */
     margin-top: 10px;
 }
 
 .overlay {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 1.5rem;
-    color: white; /* Ensure overlay text is white */
+    color: black; /* Ensure overlay text is black */
     margin-bottom: 10px;
 }
 
