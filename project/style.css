@@ -100,6 +100,7 @@ nav {
     width: 250px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s;
+    color: white; /* Ensures all text in the box is white by default */
 }
 
 .flex-item img {
@@ -113,9 +114,15 @@ nav {
     transform: translateY(-5px);
 }
 
+.flex-item p {
+    color: white; /* Makes paragraph text white */
+    margin-top: 10px;
+}
+
 .overlay {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 1.5rem;
+    color: white; /* Ensures the overlay text is white */
     margin-bottom: 10px;
 }
 

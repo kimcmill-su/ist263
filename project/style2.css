@@ -100,6 +100,7 @@ nav {
     width: 250px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s;
+    color: white; /* Ensure all text inside the flexbox is white */
 }
 
 .flex-item img {
@@ -111,6 +112,18 @@ nav {
 
 .flex-item:hover {
     transform: translateY(-5px);
+}
+
+.flex-item p {
+    color: white; /* Ensure paragraph text is white */
+    margin-top: 10px;
+}
+
+.overlay {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    color: white; /* Ensure overlay text is white */
+    margin-bottom: 10px;
 }
 
 /* Footer Styling */
